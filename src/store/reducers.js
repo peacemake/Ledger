@@ -1,8 +1,10 @@
 import C from './constants'
 import stateFile from '../data/teams.json'
 import { combineReducers } from 'redux'
+import { loadState } from '../helpers/localStorage'
 
-let initialState = stateFile
+let localState = loadState();
+let initialState = (localState !== undefined ? localState : stateFile)
 
 const teams = (state = initialState.teams, action) => {
     switch (action.type) {

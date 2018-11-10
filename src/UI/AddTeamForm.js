@@ -22,9 +22,11 @@ const AddTeamForm = ({ onNewTeam = f => f }) => {
             <input ref={input => pointLimit = input}
                 type="text"
                 placeholder="Point limit" required />
-            <input ref={input => faction = input}
-                type="text"
-                placeholder="Team faction" required />
+            <select ref={input => faction = input} required>
+                <option value="Adeptus Astartes">Adeptus Astartes</option>
+                <option value="Astra Militarum">Astra Militarum</option>
+                <option value="Adeptus Mechanicus">Adeptus Mechanicus</option>
+            </select>
             <button>ADD</button>
         </form>
     )

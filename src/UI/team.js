@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../style/App.css'
 
-const Team = ({ name, faction, pointLimit }) => {
+const Team = ({ name, pointLimit, faction }) => {
     return (
         <div className="TeamListItem">
             {name} - [{faction}]
