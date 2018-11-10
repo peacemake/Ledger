@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import { NewTeam, Teams } from './containers'
+import './style/App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
+var imageName = require('./content/logo.png')
 
-      </div>
-    );
-  }
-}
 
-export default App;
+const App = () => (
+    <div className="app">
+        <div className="head">
+        <img height='30px' src={imageName} alt="kill team logo" />
+            &nbsp;Ledger - Create your team
+        </div>
+        <NewTeam className="newTeamForm" />
+        <div className="menu" id="left">
+            <Teams />
+        </div>
+        <div className="content" id="right">
+
+        </div>
+    </div>
+)
+
+export default App

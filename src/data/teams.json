@@ -1,114 +1,112 @@
 {
-  "teams": [
-    {
+  "teams": {
+    "1": {
       "id": "1",
       "name": "Auringonlaskun ratsastajat",
-      "scenario": "Matched Play",
       "pointLimit": 100,
       "faction": "Astra Militarum",
-      "members": [
-        {
-          "id": "2",
-          "spec": "Leader",
-          "name": "Jaska",
-          "unitType": "Special Weapons Guardsman",
-          "equipment": [
-            "Lasgun",
-            "Frag Grenade"
-          ],
-          "skills": [
-            "Resourceful",
-            "Voice of Command"
-          ]
-        },
-        {
-          "id": "3",
-          "spec": "Scout",
-          "name": "Esko",
-          "unitType": "Special Weapons Guardsman",
-          "equipment": [
-            "Flamer",
-            "Frag Grenade"
-          ],
-          "skills": [
-            "Breacher"
-          ]
-        },
-        {
-          "id": "4",
-          "spec": "Sniper",
-          "name": "Markku",
-          "unitType": "Scion",
-          "equipment": [
-            "Meltagun",
-            "Frag Grenade"
-          ],
-          "skills": [
-            "Deadeye"
-          ]
-        }
-      ]
+      "units": [2, 3, 4]
     },
-    {
+    "5": {
       "id": "5",
       "name": "Avenging Avengers",
-      "scenario": "Matched Play",
       "pointLimit": 100,
       "faction": "Adeptus Astartes",
-      "members": [
-        {
-          "id": "6",
-          "spec": "Leader",
-          "name": "Alexander",
-          "unitType": "Intercessor Sergeant",
-          "equipment": [
-            "Bolt rifle",
-            "Frag Grenade",
-            "Krak Grenade",
-            "Power Sword",
-            "Bolt pistol"
-          ],
-          "skills": [
-            "Resourceful",
-            "And They Shall Know No Fear",
-            "Superhuman physiology"
-          ]
-        },
-        {
-          "id": "7",
-          "spec": "Comms",
-          "name": "Daniel",
-          "unitType": "Intercessor Gunner",
-          "equipment": [
-            "Bolt rifle",
-            "Frag Grenade",
-            "Krak Grenade",
-            "Auxiliary grenade launcher",
-            "Auspex",
-            "Bolt pistol"
-          ],
-          "skills": [
-            "And They Shall Know No Fear",
-            "Superhuman physiology"
-          ]
-        },
-        {
-          "id": "8",
-          "spec": "Veteran",
-          "name": "Agrippa",
-          "unitType": "Scout Sergeant",
-          "equipment": [
-            "Sniper rifle",
-            "Frag Grenade",
-            "Camo cloak",
-            "Bolt pistol"
-          ],
-          "skills": [
-            "And They Shall Know No Fear",
-            "Superhuman physiology"
-          ]
-        }
+      "units": [6, 7, 8]
+    }
+  },
+  "units": {
+    "2": {
+      "id": "2",
+      "spec": "Leader",
+      "name": "Jaska",
+      "unitType": "Special Weapons Guardsman",
+      "equipment": [
+        "Lasgun",
+        "Frag Grenade"
+      ],
+      "skills": [
+        "Resourceful",
+        "Voice of Command"
+      ]
+    },
+    "3": {
+      "id": "3",
+      "spec": "Scout",
+      "name": "Esko",
+      "unitType": "Special Weapons Guardsman",
+      "equipment": [
+        "Flamer",
+        "Frag Grenade"
+      ],
+      "skills": [
+        "Breacher"
+      ]
+    },
+    "4": {
+      "id": "4",
+      "spec": "Sniper",
+      "name": "Markku",
+      "unitType": "Scion",
+      "equipment": [
+        "Meltagun",
+        "Frag Grenade"
+      ],
+      "skills": [
+        "Deadeye"
+      ]
+    },
+    "6": {
+      "id": "6",
+      "spec": "Leader",
+      "name": "Alexander",
+      "unitType": "Intercessor Sergeant",
+      "equipment": [
+        "Bolt rifle",
+        "Frag Grenade",
+        "Krak Grenade",
+        "Power Sword",
+        "Bolt pistol"
+      ],
+      "skills": [
+        "Resourceful",
+        "And They Shall Know No Fear",
+        "Superhuman physiology"
+      ]
+    },
+    "7": {
+      "id": "7",
+      "spec": "Comms",
+      "name": "Daniel",
+      "unitType": "Intercessor Gunner",
+      "equipment": [
+        "Bolt rifle",
+        "Frag Grenade",
+        "Krak Grenade",
+        "Auxiliary grenade launcher",
+        "Auspex",
+        "Bolt pistol"
+      ],
+      "skills": [
+        "And They Shall Know No Fear",
+        "Superhuman physiology"
+      ]
+    },
+    "8": {
+      "id": "8",
+      "spec": "Veteran",
+      "name": "Agrippa",
+      "unitType": "Scout Sergeant",
+      "equipment": [
+        "Sniper rifle",
+        "Frag Grenade",
+        "Camo cloak",
+        "Bolt pistol"
+      ],
+      "skills": [
+        "And They Shall Know No Fear",
+        "Superhuman physiology"
       ]
     }
-  ]
+  }
 }
