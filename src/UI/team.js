@@ -1,33 +1,36 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Unit from './Unit'
+import intersection from 'lodash/intersection'
 import '../style/App.css'
 
-const Team = ({ name, pointLimit, faction, units }) => {
+const Team = ({ team, units }) => {
 
-    let currentPoints = 0
-    const unitArray = Object.values(units)
+    if (team !== undefined) {
+        const unitArray = [...Object.keys(units)]
+        const unitIdArray = unitArray.map(Number);
+        const members = intersection(unitIdArray, team.units)
 
-    return (
-        <div className="Team">
-            <div className="TeamHeader">
-                {name} - [{faction}]
-                <br />
-                > Point limit: {pointLimit}
-                <br />
-                > Current points: {currentPoints}
+        const unitList = [...Object.values(units)]
+
+        return (
+            <div className="Team">
+                <h3>{team.name} members:</h3>
+                <div className="TeamUnits">
+                    {unitList.map(unit => <Unit key={unit.id} {...unit} />)}
+                </div>
             </div>
-            <div className="TeamUnits">
-                {unitArray.map(unit => <Unit key={unit.id} {...unit} />)}
-            </div>
-        </div>
-    )
+        )
+    } else {
+        return (
+            < div className="Team" > No team data.</div >
+        )
+    }
 }
 
 Team.propTypes = {
-    name: PropTypes.string.isRequired,
-    pointLimit: PropTypes.number.isRequired,
-    faction: PropTypes.string.isRequired
+    team: PropTypes.object,
+    units: PropTypes.object.isRequired
 }
 
 export default Team

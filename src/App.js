@@ -1,5 +1,5 @@
 import React from 'react';
-import { NewTeam, Teams } from './containers'
+import { NewTeam, Teams, EditableTeam } from './containers'
 import './style/App.css'
 
 var imageName = require('./content/logo.png')
@@ -16,7 +16,7 @@ const App = () => (
             <NewTeam className="newTeamForm" />
         </div>
         <div className="content">
-            
+            <EditableTeam />
         </div>
     </div>
 )

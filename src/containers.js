@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import AddTeamForm from './UI/AddTeamForm'
 import TeamList from './UI/TeamList'
+import Team from './UI/Team'
 import { addTeam, editTeam } from './store/actions'
 
 export const NewTeam = connect(
@@ -25,3 +26,16 @@ export const Teams = connect(
             }
         })
 )(TeamList)
+export const EditableTeam = connect(
+    state =>
+        ({
+            team: state.teams[state.edit],
+            units: state.units
+        }),
+        dispatch =>
+        ({
+            onSelect(id) {
+                dispatch(editTeam(id))
+            }
+        })
+)(Team)

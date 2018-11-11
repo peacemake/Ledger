@@ -2,20 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../style/App.css'
 
-const Unit = ({ name, pointLimit, faction }) => {
+const Unit = ({ name, spec, unitType, equipment, skills }) => {
     return (
         <div className="Unit">
-            {name} - [{faction}]
+            {name} - [{spec}]
             <br/>
-            > Point limit: {pointLimit}
+            {unitType}
+            <br/>
+
         </div>
     )
 }
 
 Unit.propTypes = {
-    name: PropTypes.string.isRequired,
-    pointLimit: PropTypes.number.isRequired,
-    faction: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired
 }
 
 export default Unit
