@@ -16,15 +16,28 @@ const teams = (state = initialState.teams, action) => {
                     name: action.name,
                     pointLimit: action.pointLimit,
                     faction: action.faction,
-                    units: []
+                    units: [],
+                    edit: action.edit
                 }
             }
+
+
         case C.ADD_UNIT:
             return state.map(team =>
                 (team.id === action.teamId)
-                    ? [...team.units, action.data]
+                    ? [...team.units, action.unitId]
                     : team
             )
+        case C.EDIT_TEAM:
+            let newState = {}
+            Object.keys(state).forEach(function (key) {
+                if (key !== action.teamId) {
+                    newState[key] = { ...state[key], edit: false }
+                } else {
+                    newState[key] = { ...state[action.teamId], edit: true }
+                }
+            })
+            return newState
         default:
             return state
     }
@@ -41,9 +54,12 @@ const units = (state = initialState.units, action) => {
                     name: action.name,
                     unitType: action.unitType,
                     equipment: [],
-                    skills: []
+                    skills: [],
+                    edit: action.edit
                 }
             }
+        case C.EDIT_UNIT:
+            return { ...state, [action.unitId]: { ...state[action.unitId], edit: !state[action.unitId].edit } }
         case C.ADD_EQUIPMENT:
             return state.map(unit =>
                 (unit.id === action.unitId)
@@ -69,6 +85,6 @@ const units = (state = initialState.units, action) => {
     }
 }
 
-const rootReducer = combineReducers({teams: teams, units: units})
+const rootReducer = combineReducers({ teams: teams, units: units })
 
 export default rootReducer

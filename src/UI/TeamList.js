@@ -1,23 +1,20 @@
 import React from 'react';
-import Team from './Team'
+import TeamListItem from './TeamListItem'
 import PropTypes from 'prop-types'
 
-const TeamList = ({ teams }) => {
+const TeamList = ({ teams, onSelect = f => f }) => {
 
     const teamArray = Object.values(teams)
 
     return (
         <div className="TeamList">
-            {teamArray.map(team =>
-                <Team
-                    key={team.id}
-                    {...team}
-                />)}
+            {teamArray.map(team => <TeamListItem onSelect={() => onSelect(team.id)} key={team.id} {...team} />)}
         </div>
     )
 }
 TeamList.propTypes = {
-    teams: PropTypes.object
+    teams: PropTypes.object,
+    onSelect: PropTypes.func
 }
 
 export default TeamList

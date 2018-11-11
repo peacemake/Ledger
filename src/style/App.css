@@ -15,6 +15,8 @@ body {
 }
 .newTeamForm {
   background-color: #282c34;
+  width: 100%;
+  float: left;
 }
 .menu {
   background-color: #282c34;
@@ -26,9 +28,19 @@ body {
 .TeamListItem {
   font-size: 12pt;
   background-color: #282c34;
-  border-radius: 5px;
+  border-radius: 10px 5px 5px 10px;
   border-style: solid;
   border-color: orangered;
+  padding: 0px 10px 10px 10px;
+  margin-top: 5px;
+}
+.TeamListItemSelected {
+  font-size: 12pt;
+  background-color: #373d48;
+  border-radius: 10px 0px 0px 10px;
+  border-style: solid;
+  border-color: orangered;
+  border-right: #373d48;
   padding: 10px;
   margin-top: 5px;
 }

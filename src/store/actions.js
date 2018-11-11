@@ -8,7 +8,8 @@ export const addTeam = (name, pointLimit, faction) =>
     name,
     pointLimit,
     faction,
-    units: []
+    units: [],
+    edit: false
 })
 
 export const addUnit = (name, unitType, teamId) =>
@@ -20,8 +21,22 @@ export const addUnit = (name, unitType, teamId) =>
     name,
     unitType,
     equipment: [],
-    skills: []
+    skills: [],
+    edit: false
+})
 
+export const editTeam = (id) =>
+({
+    type: C.EDIT_TEAM,
+    teamId: id,
+    edit: false
+})
+
+export const editUnit = (id) =>
+({
+    type: C.EDIT_UNIT,
+    unitId: id,
+    edit: true
 })
 
 export const addEquipment = (data, unitId) =>

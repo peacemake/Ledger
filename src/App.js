@@ -8,15 +8,15 @@ var imageName = require('./content/logo.png')
 const App = () => (
     <div className="app">
         <div className="head">
-        <img height='30px' src={imageName} alt="kill team logo" />
+            <img height='30px' src={imageName} alt="kill team logo" />
             &nbsp;Ledger - Create your team
         </div>
-        <NewTeam className="newTeamForm" />
-        <div className="menu" id="left">
+        <div className="menu">
             <Teams />
+            <NewTeam className="newTeamForm" />
         </div>
-        <div className="content" id="right">
-
+        <div className="content">
+            
         </div>
     </div>
 )

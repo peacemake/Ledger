@@ -5,14 +5,16 @@
       "name": "Auringonlaskun ratsastajat",
       "pointLimit": 100,
       "faction": "Astra Militarum",
-      "units": [2, 3, 4]
+      "units": [2, 3, 4],
+      "edit": false
     },
     "5": {
       "id": "5",
       "name": "Avenging Avengers",
       "pointLimit": 100,
       "faction": "Adeptus Astartes",
-      "units": [6, 7, 8]
+      "units": [6, 7, 8],
+      "edit": false
     }
   },
   "units": {
@@ -28,7 +30,8 @@
       "skills": [
         "Resourceful",
         "Voice of Command"
-      ]
+      ],
+      "edit": false
     },
     "3": {
       "id": "3",
@@ -41,7 +44,8 @@
       ],
       "skills": [
         "Breacher"
-      ]
+      ],
+      "edit": false
     },
     "4": {
       "id": "4",
@@ -54,7 +58,8 @@
       ],
       "skills": [
         "Deadeye"
-      ]
+      ],
+      "edit": false
     },
     "6": {
       "id": "6",
@@ -72,7 +77,8 @@
         "Resourceful",
         "And They Shall Know No Fear",
         "Superhuman physiology"
-      ]
+      ],
+      "edit": false
     },
     "7": {
       "id": "7",
@@ -90,7 +96,8 @@
       "skills": [
         "And They Shall Know No Fear",
         "Superhuman physiology"
-      ]
+      ],
+      "edit": false
     },
     "8": {
       "id": "8",
@@ -106,7 +113,8 @@
       "skills": [
         "And They Shall Know No Fear",
         "Superhuman physiology"
-      ]
+      ],
+      "edit": false
     }
   }
 }
