@@ -8,8 +8,6 @@ const TeamListItem = ({ onSelect,  name, pointLimit, faction, edit }) => {
             {name} - [{faction}]
             <br />
             > Point limit: {pointLimit}
-            <br />
-            > Edit: {edit}
         </div>
     )
 }
